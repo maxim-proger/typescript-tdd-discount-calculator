@@ -12,4 +12,9 @@ describe('calculateDiscount', () => {
         expect(calculateDiscount(4999, false)).toBe(5)
     })
 
+    it('даёт скидку 10% если заказ от 5000', () => {
+        expect(calculateDiscount(5000, false)).toBe(10)
+        expect(calculateDiscount(9999, false)).toBe(10)
+    })
+
 })
