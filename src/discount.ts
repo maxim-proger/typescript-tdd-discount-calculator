@@ -6,8 +6,12 @@ const DISCOUNT_VIP = 5
 const DISCOUNT_MAX = 20
 
 export function calculateDiscount(orderAmount: number, isVip: boolean): number {
-    if (orderAmount >= DISCOUNT_THRESHOLD_LOW) {
+    if (orderAmount >= DISCOUNT_THRESHOLD_LOW && orderAmount < DISCOUNT_THRESHOLD_HIGH) {
         return DISCOUNT_LOW
+    }
+
+    if (orderAmount >= DISCOUNT_THRESHOLD_HIGH) {
+        return DISCOUNT_HIGH
     }
 
     return 0
