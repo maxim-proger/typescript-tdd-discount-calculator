@@ -7,4 +7,9 @@ describe('calculateDiscount', () => {
         expect(calculateDiscount(999, false)).toBe(0)
     })
 
+    it('даёт скидку 5% если заказ от 1000 до 4999', () => {
+        expect(calculateDiscount(1000, false)).toBe(5)
+        expect(calculateDiscount(4999, false)).toBe(5)
+    })
+
 })
