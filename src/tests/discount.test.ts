@@ -17,4 +17,10 @@ describe('calculateDiscount', () => {
         expect(calculateDiscount(9999, false)).toBe(10)
     })
 
+    it('даёт доп. скидку 5% для VIP', () => {
+        expect(calculateDiscount(999, true)).toBe(5)
+        expect(calculateDiscount(1000, true)).toBe(10)
+        expect(calculateDiscount(5000, true)).toBe(15)
+    })
+    
 })
