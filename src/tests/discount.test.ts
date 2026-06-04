@@ -23,4 +23,8 @@ describe('calculateDiscount', () => {
         expect(calculateDiscount(5000, true)).toBe(15)
     })
 
+    it('ограничиевает суммарную скидку до 20%', () => {
+        expect(calculateDiscount(5000, true)).toBeLessThanOrEqual(20)
+    })
+
 })
