@@ -22,5 +22,5 @@ describe('calculateDiscount', () => {
         expect(calculateDiscount(1000, true)).toBe(10)
         expect(calculateDiscount(5000, true)).toBe(15)
     })
-    
+
 })

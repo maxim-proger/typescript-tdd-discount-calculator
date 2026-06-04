@@ -14,5 +14,9 @@ export function calculateDiscount(orderAmount: number, isVip: boolean): number {
         discount = DISCOUNT_LOW
     }
 
+    if (isVip) {
+        discount += DISCOUNT_VIP
+    }
+
     return discount
 }
